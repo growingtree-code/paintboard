@@ -14,4 +14,4 @@ ctx.rect(350,350,100,100);
 ctx.fillStyle = 'red';
 setTimeout(
     ()=>{ctx.fill();},
-    3000);
+    3000);//test
