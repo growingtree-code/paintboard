@@ -13,12 +13,8 @@ ctx.fill();
 
 ctx.beginPath()
 ctx.fillStyle = 'brown'
-ctx.arc(290,140,10,3.1,2*Math.PI);
-ctx.fill();
-
-ctx.beginPath()
-ctx.fillStyle = 'brown'
-ctx.arc(330,140,10,3.1,2*Math.PI);
+ctx.arc(290,140,10,Math.PI,2*Math.PI);
+ctx.arc(330,140,10,Math.PI,2*Math.PI);
 ctx.fill();
 
 
