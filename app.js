@@ -12,13 +12,14 @@ function callMoveto(event) {
     }
     ctx.moveTo(event.offsetX,event.offsetY);
 }
-function drawstart(event) {
+function startPainting(event) {
     isPainting = true;
 }
-function drawend(event) {
+function cancelPainting(event) {
     isPainting = false;
 }
 
 canvas.addEventListener("mousemove",callMoveto);
-canvas.addEventListener("mousedown",drawstart);
-canvas.addEventListener("mouseup",drawend);
+canvas.addEventListener("mousedown",startPainting);
+canvas.addEventListener("mouseup",cancelPainting);
+canvas.addEventListener("mouseleave",cancelPainting);
