@@ -25,7 +25,8 @@ function onClick(event) {
 
 function mousemove(event) {
     console.log('mousemove',event);
-    ctx.moveTo(0,0);
+    ctx.beginPath();
+    ctx.moveTo(Math.random()*800,Math.random()*800);
     const color = colors[Math.floor(Math.random()*colors.length)];
     ctx.strokeStyle= color;
     ctx.lineTo(event.offsetX,event.offsetY);
