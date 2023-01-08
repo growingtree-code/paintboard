@@ -1,18 +1,24 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d")
-
 canvas.width = 800;
 canvas.height = 800;
 
-ctx.fillRect(200,200,50,200);
-ctx.fillRect(400,200,50,200);
-ctx.lineWidth= 10;
-ctx.strokeRect(300,295,50,100);
-ctx.fillRect(200,200,200,20);
+ctx.fillRect(200,200,15,100);
+ctx.fillRect(400,200,15,100);
+ctx.fillRect(260,200,100,150);
 
-ctx.moveTo(200,200);
-ctx.lineTo(325,100);
-ctx.lineTo(450,200);
+
+ctx.arc(310,140,50,0,2*Math.PI);
+ctx.fill();
+
+ctx.beginPath()
+ctx.fillStyle = 'brown'
+ctx.arc(290,140,10,3.1,2*Math.PI);
+ctx.fill();
+
+ctx.beginPath()
+ctx.fillStyle = 'brown'
+ctx.arc(330,140,10,3.1,2*Math.PI);
 ctx.fill();
 
 
