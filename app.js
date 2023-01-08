@@ -4,8 +4,6 @@ const ctx = canvas.getContext("2d")
 canvas.width = 800;
 canvas.height = 800;
 
-ctx.moveTo(50,50);//브러쉬 시작위치
-ctx.lineTo(150,50);//도착할 좌표위치 결록적으로 100 길이에 사각형이그려짐
-ctx.moveTo(150,50);//브러쉬 시작위치
-ctx.lineTo(150,150);
-ctx.stroke();
+ctx.fillRect(200,200,50,200);
+ctx.fillRect(400,200,50,200);
+ctx.strokeRect(300,300,50,100);
