@@ -1,3 +1,4 @@
+const color = document.getElementById("color");
 const lineWidth = document.getElementById("line-width");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d")
@@ -11,6 +12,7 @@ function callMoveto(event) {
         ctx.stroke();
         return;
     }
+    ctx.beginPath();
     ctx.moveTo(event.offsetX,event.offsetY);
 }
 function startPainting(event) {
@@ -21,9 +23,15 @@ function cancelPainting(event) {
 }
 function onLineWidthChange(event) {
     console.log(event.target.value);
-    ctx.beginPath();
+
     // ctx.lineWidth = lineWidth.value;
     ctx.lineWidth = event.target.value;
+}
+
+function onColorChange(event) {
+    console.log(event.target.value);
+    ctx.strokeStyle = event.target.value;
+    ctx.fillStyle = event.target.value;
 }
 
 canvas.addEventListener("mousemove",callMoveto);
@@ -31,4 +39,5 @@ canvas.addEventListener("mousedown",startPainting);
 canvas.addEventListener("mouseup",cancelPainting);
 canvas.addEventListener("mouseleave",cancelPainting);
 
-lineWidth.addEventListener("change",onLineWidthChange)
+lineWidth.addEventListener("change",onLineWidthChange);
+color.addEventListener("change",onColorChange);
